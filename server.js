@@ -37,7 +37,8 @@ const routeCourse = require('./src/course/courseRoute');
 app.use('/fepi', routeCourse);
 
 const routeProgramming = require('./src/programming/programmingRoute');
-app.use('/fepi', routeProgramming);
+app.use('/fepi/programming', routeProgramming);
+
 
 app.listen(PORT, () => {
   console.log(`API Gateway escuchando en el puerto ${PORT}`);

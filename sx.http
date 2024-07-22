@@ -1,0 +1,29 @@
+###
+POST http://localhost:10000/fepi/programming/create
+Content-Type: application/json
+
+{
+    "state": "Finalizado",
+    "courseId": "669ae072f358b05890176f18", 
+    "instructorId": "6695c78c3fbbee5fee9ea24f",
+    "apprentices": [
+        "60d9f9f8a8e9b9c1d4f6a4b7", 
+        "60d9f9f8a8e9b9c1d4f6a4b8"
+    ],
+    "startDate": "2024-08-01T00:00:00Z",
+    "endDate": "2024-12-01T00:00:00Z",
+    "attendanceDates": [
+        {
+            "date": "2024-08-10T00:00:00Z",
+            "attendees": [
+                "669ae072f358b05890176f18"
+            ]
+        },
+        {
+            "date": "2024-08-17T00:00:00Z",
+            "attendees": [
+                "6695c78c3fbbee5fee9ea24f"
+            ]
+        }
+    ]
+}

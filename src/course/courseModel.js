@@ -25,7 +25,7 @@ const courseSchema = new mongoose.Schema({
         type: String,
         required: true,
         enum: ['Disponible', 'No disponible'],
-        default: 'No disponible'
+        default: 'Disponible'
     },
     assigned: {
         type: Boolean,
