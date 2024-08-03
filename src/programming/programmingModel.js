@@ -3,6 +3,9 @@ const Schema = mongoose.Schema;
 
 const attendanceSchema = new Schema({
     date: { type: Date, required: true },
+    location: {
+        type: String,
+    },
     attendees: [{ type: Schema.Types.ObjectId, ref: 'Apprentice' }],
 });
 
@@ -33,9 +36,6 @@ const programmingSchema = new Schema({
     endDate: {
         type: Date,
         required: true
-    },
-    location: {
-        type: String,
     },
     attendanceDates: [attendanceSchema]
 }, { timestamps: true });
