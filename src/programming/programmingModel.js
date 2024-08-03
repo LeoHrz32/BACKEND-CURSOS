@@ -11,7 +11,7 @@ const programmingSchema = new Schema({
         type: String,
         required: true,
         enum: ['Disponible', 'En proceso', 'Cancelado', 'Finalizado']
-    },
+    }, 
     courseId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Course',
@@ -33,6 +33,9 @@ const programmingSchema = new Schema({
     endDate: {
         type: Date,
         required: true
+    },
+    location: {
+        type: String,
     },
     attendanceDates: [attendanceSchema]
 }, { timestamps: true });

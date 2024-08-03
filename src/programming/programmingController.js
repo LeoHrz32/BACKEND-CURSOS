@@ -5,7 +5,7 @@ const Apprentice = require('../apprentice/apprenticeModel');
 
 exports.createProgramming = async (req, res) => {
     try {
-        const { state, courseId, instructorId, apprentices, startDate, endDate, attendanceDates } = req.body;
+        const { state, courseId, instructorId, apprentices, startDate, endDate,location, attendanceDates } = req.body;
         const programming = new Programming({
             state,
             courseId,
@@ -13,6 +13,7 @@ exports.createProgramming = async (req, res) => {
             apprentices,
             startDate,
             endDate,
+            location,
             attendanceDates
         });
         await programming.save();
@@ -76,6 +77,8 @@ exports.updateProgramming = async (req, res) => {
         if (updates.apprentices) programming.apprentices = updates.apprentices;
         if (updates.startDate) programming.startDate = updates.startDate;
         if (updates.endDate) programming.endDate = updates.endDate;
+        if (updates.location) programming.location = updates.location;
+
 
         if (updates.attendanceDates) {
             updates.attendanceDates.forEach(attendanceUpdate => {
